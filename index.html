@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      background-color: #7beae533;
+    }
+
+    ::-webkit-scrollbar{
+      width: 1.3rem;
+    }
+
+    ::-webkit-scrollbar-track{
+      background: rgba(198, 188, 189, 0.627)
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background-color: #c2ebe9e6
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+    background:  #fe4b4b36;
+    }
+
+    .pricing-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 2rem;
+      margin-top: 100px;
+      
+    }
+
+    .pricing-plan{
+      background-color: bisque;
+      padding: 20px;
+      width: 500px;
+      border-radius: 30px;
+      max-width: 400px;
+      text-align: center;
+      flex: 1;
+      background: linear-gradient(to right, #fe4b4b8e, #95e4e0);
+      box-shadow: 20px 0px 40px 2px rgba(209, 152, 152, 0.782);
+    }
+
+    .plan-title{
+      font-weight: bold;
+      font-size: 20px;
+      background: linear-gradient(to right, hsla(0, 59%, 76%, 0.557), #ddf9f7) ;
+      padding: 0.3rem;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .plan-price{
+      font-weight: bold;
+      font-size: 3rem;
+    }
+
+    .plan-features{
+      list-style: none;
+      padding: 0;
+    }
+
+    .plan-features > li {
+      padding: 10px;
+    }
+
+    .plan-button{
+      border: 1px solid #c89089;
+      padding: 10px;
+      height: 45px;
+      width: 75px;
+      border-radius: 5px;
+      background-color: rgb(247, 234, 234);
+      box-shadow: 10px 0px 20px 1px #dceae7e9;
+      transition: all 400ms;
+    }
+
+    .plan-button:hover{
+    color: #e80f0f;
+    background-color:  #f5fafa;
+    transform: translateY(-4px);
+    }
+
+    .plan-button:focus{
+    transform: translateY(3px);
+    transition: all 400ms;
+    transform: scale(0.9);
+    }
+
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      .pricing-container{
+        flex-direction: column;
+        height: 100%;
+      }
+  
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
